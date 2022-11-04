@@ -12,7 +12,6 @@ public class Circulo implements CalculadorDeFormas {
         System.out.println();
         System.out.println("El perimetro del circulo es: " + perimetro);
     }
-
     @Override
     public void calcularArea() {
         float area = PI * radio * radio;
