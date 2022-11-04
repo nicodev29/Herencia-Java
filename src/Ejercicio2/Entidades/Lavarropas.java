@@ -5,21 +5,14 @@ public class Lavarropas extends Electrodomesticos{
     private Scanner leer = new Scanner(System.in);
     private int carga;
 
-
     public Lavarropas(){
     };
-
-    public Lavarropas(float precio, String color, char consumoEnergetico, int peso, int carga) {
-        super(precio, color, consumoEnergetico, peso);
-        this.carga = carga;
-    }
 
     public void crearLavarropas(){
         System.out.println("Creando un lavarropas:");
         creandoElectrodomesticos();
         System.out.println("Ingresa la carga que soporta el lavarropas: ");
         this.carga = leer.nextInt();
-
     }
 
     public void precioFinal() {

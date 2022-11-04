@@ -5,5 +5,7 @@ public class Main {
         ServicioCreador servicioCreador = new ServicioCreador();
         servicioCreador.creadorFormas();
 
+        System.out.println("Fin del programa");
+
     }
 }
