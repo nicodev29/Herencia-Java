@@ -49,24 +49,12 @@ public class Televisor extends Electrodomesticos {
         return this.resolucion;
     }
 
-
-    @Override
-    public String toString() {
-        return "{" +
-                " precio='" + getPrecio() + "'" +
-                ", color='" + getColor() + "'" +
-                ", consumo='" + this.consumoEnergetico + "'" +
-                ", peso='" + getPeso() + "'" +
-                ", resolución='" + getResolucion() + "'" +
-                "}";
-    }
-
     public void crearTelevisor() {
-        System.out.println("Creando televisor");
+        System.out.println("Creando un Televisor");
         creandoElectrodomesticos();
         System.out.println("Ingrese las pulgadas del televisor");
         this.resolucion = Integer.parseInt(scanner.nextLine());
-        System.out.println("Tiene sintonizador TVT (si - no)");
+        System.out.println("Tiene sintonizador? (si / no)");
         this.sintonizador = scanner.nextLine();
     }
 
@@ -77,4 +65,19 @@ public class Televisor extends Electrodomesticos {
                 (this.resolucion > 40 ? this.precio * 0.3 : 0))
                 + (this.sintonizador.equals("si") ? 500 : 0);
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+                " precio='" + getPrecio() + "'" +
+                ", color='" + getColor() + "'" +
+                ", consumo=" + getConsumoEnergetico() +
+                ", peso='" + getPeso() + "'" +
+                ", resolución='" + getResolucion() + "'" +
+                "}";
+    }
+
+
+
 }
+

@@ -33,7 +33,7 @@ public class Lavarropas extends Electrodomesticos{
         return "Lavarropas{" +
                 "Precio=" + getPrecio() +
                 ", Color='" + getColor() + '\'' +
-                ", ConsumoEnergetico=" + this.consumoEnergetico +
+                ", ConsumoEnergetico=" + getConsumoEnergetico() +
                 ", Peso=" + getPeso() +
                 ", Carga=" + getCarga() +
                 '}';

@@ -22,21 +22,21 @@ public class Electrodomesticos {
     }
 
 
-    public char comprobarConsumoEnergetico(char letra){
-        if (letra == 'A' || letra == 'B' || letra == 'C' || letra == 'D' || letra == 'E' || letra == 'F'){
+    public char comprobarConsumoEnergetico(char letra) {
+        if (letra == 'A' || letra == 'B' || letra == 'C' || letra == 'D' || letra == 'E' || letra == 'F') {
             return letra;
-        }else{
+        } else {
             return 'F';
         }
     }
 
-    public void comprobarColor (String color) {
+    public void comprobarColor(String color) {
         String colores_aceptados = color.toLowerCase();
-            if (colores_aceptados.equals("negro")  ||
-                colores_aceptados.equals("rojo")   ||
-                colores_aceptados.equals("azul")   ||
-                colores_aceptados.equals("blanco") ||
-                colores_aceptados.equals("gris")) {
+        if (colores_aceptados.equals("negro") ||
+            colores_aceptados.equals("rojo") ||
+            colores_aceptados.equals("azul") ||
+            colores_aceptados.equals("blanco") ||
+            colores_aceptados.equals("gris")) {
             this.color = colores_aceptados;
         } else {
             System.out.println("Ingresaste un color no valido, se asignara el color blanco");
@@ -44,18 +44,18 @@ public class Electrodomesticos {
         }
     }
 
-    public void pesoElectrodomestico(int peso){
+    public void pesoElectrodomestico(int peso) {
         this.peso = peso;
     }
 
 
-    public void creandoElectrodomesticos(){
+    public void creandoElectrodomesticos() {
         System.out.println("Ingrese el consumo: A - B - C - D");
         this.comprobarConsumoEnergetico(leer.next().charAt(0));
         System.out.println("Ingrese el color: ");
         leer.nextLine();
         this.comprobarColor(leer.nextLine());
-        System.out.println("Ingrese el peso: ");
+        System.out.println("Ingrese el peso en kg: ");
         this.pesoElectrodomestico(leer.nextInt());
     }
 
@@ -73,39 +73,47 @@ public class Electrodomesticos {
                 (80 <= this.peso ? 1000 : 0);
     }
 
-
     public float getPrecio() {
         return precio;
     }
+
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
+
     public char getConsumoEnergetico() {
         return consumoEnergetico;
     }
+
     public void setConsumoEnergetico(char consumoEnergetico) {
         this.consumoEnergetico = consumoEnergetico;
     }
+
     public int getPeso() {
         return peso;
     }
+
     public void setPeso(int peso) {
         this.peso = peso;
     }
 
     @Override
+
+
     public String toString() {
         return "Electrodomesticos{" +
-                ", Precio=" + precio +
-                ", Color='" + color + '\'' +
-                ", ConsumoEnergetico=" + consumoEnergetico +
-                ", Peso=" + peso +
-                '}';
+            ", Precio=" + precio +
+            ", Color='" + color + '\'' +
+            ", ConsumoEnergetico=" + getConsumoEnergetico() +
+            ", Peso=" + peso +
+            '}';
     }
 }
