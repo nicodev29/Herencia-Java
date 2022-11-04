@@ -15,7 +15,6 @@ public class Rectangulo implements CalculadorDeFormas {
         System.out.println();
         System.out.println("El perimetro del rectangulo es: " + perimetro);
     }
-
     @Override
     public void calcularArea() {
         int area = base * altura;
