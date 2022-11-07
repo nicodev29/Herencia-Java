@@ -1,9 +1,6 @@
 package Ejercicio2.Entidades;
-
 import java.util.Scanner;
-
 public class Electrodomesticos {
-
     Scanner leer = new Scanner(System.in);
 
     protected float precio;
@@ -48,9 +45,8 @@ public class Electrodomesticos {
         this.peso = peso;
     }
 
-
     public void creandoElectrodomesticos() {
-        System.out.println("Ingrese el consumo: A - B - C - D");
+        System.out.println("Ingrese el consumo: A - B - C - D - E - F");
         this.comprobarConsumoEnergetico(leer.next().charAt(0));
         System.out.println("Ingrese el color: ");
         leer.nextLine();
@@ -106,7 +102,6 @@ public class Electrodomesticos {
     }
 
     @Override
-
 
     public String toString() {
         return "Electrodomesticos{" +
