@@ -29,7 +29,7 @@ public class ServicioCreadorElectrodomesticos  {
                 listaElectrodomesticos.add(televisor);
             }
 
-        } while (!respuesta.equals("3") && listaElectrodomesticos.size() < 1);
+        } while (!respuesta.equals("3") && listaElectrodomesticos.size() < 4);
         System.out.println("Saliendo...");
 
         for (int i = 0 ; i < listaElectrodomesticos.size() ; i++) {

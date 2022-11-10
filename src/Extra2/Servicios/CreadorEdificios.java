@@ -3,6 +3,8 @@ import Extra2.Entidades.Edificio;
 import Extra2.Entidades.EdificioDeOficinas;
 import Extra2.Entidades.Polideportivo;
 import java.util.ArrayList;
+import java.util.Scanner;
+
 public class CreadorEdificios {
     public CreadorEdificios() {
 
@@ -13,6 +15,8 @@ public class CreadorEdificios {
         edificios.add(new EdificioDeOficinas(20, 15, 10, "Apple Park", 15, 5, 10));
         edificios.add(new EdificioDeOficinas(25, 20, 15, "Samsung Tower", 20, 10, 15));
 
+
+        //mostrar polideportivos
         for (Edificio edificio : edificios) {
             if (edificio instanceof Polideportivo) {
                 edificio.calcularSuperficie();
@@ -28,7 +32,7 @@ public class CreadorEdificios {
             }
         }
 
-        //mostrar solo los edificios de oficinas
+        //mostrar edificios de oficinas
         for (Edificio edificio : edificios) {
             if (edificio instanceof EdificioDeOficinas) {
                 edificio.calcularSuperficie();
