@@ -3,7 +3,6 @@ import Extra2.Entidades.Edificio;
 import Extra2.Entidades.EdificioDeOficinas;
 import Extra2.Entidades.Polideportivo;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CreadorEdificios {
     public CreadorEdificios() {
@@ -15,16 +14,16 @@ public class CreadorEdificios {
         edificios.add(new EdificioDeOficinas(20, 15, 10, "Apple Park", 15, 5, 10));
         edificios.add(new EdificioDeOficinas(25, 20, 15, "Samsung Tower", 20, 10, 15));
 
-
         //mostrar polideportivos
         for (Edificio edificio : edificios) {
-            if (edificio instanceof Polideportivo) {
-                edificio.calcularSuperficie();
-                edificio.calcularVolumen();
+                if (edificio instanceof Polideportivo) {
+                    edificio.calcularSuperficie();
+                    edificio.calcularVolumen();
 
                 if (((Polideportivo) edificio).getTechado()) {
                     System.out.println("El " + ((Polideportivo) edificio).getNombre() + " es techado");
                     System.out.println();
+
                 } else {
                     System.out.println("El " + ((Polideportivo) edificio).getNombre() + " no es techado");
                     System.out.println();
